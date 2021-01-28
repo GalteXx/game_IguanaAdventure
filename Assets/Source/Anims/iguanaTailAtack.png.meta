@@ -1,7 +1,256 @@
 fileFormatVersion: 2
 guid: b3d4dad7d7b7e7f46b2fb91e4580d897
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -366234603755429624
+    second: iguanaTailAtack_0
+  - first:
+      213: 5761025752330677553
+    second: iguanaTailAtack_1
+  - first:
+      213: -2330634682432036287
+    second: iguanaTailAtack_2
+  - first:
+      213: -6597337730026638572
+    second: iguanaTailAtack_3
+  - first:
+      213: 3159949296789098311
+    second: iguanaTailAtack_4
+  - first:
+      213: 5437223436408122735
+    second: iguanaTailAtack_5
+  - first:
+      213: 1251342646931873233
+    second: iguanaTailAtack_6
+  - first:
+      213: -192782234224890999
+    second: iguanaTailAtack_7
+  - first:
+      213: -7184194901994034138
+    second: iguanaTailAtack_8
+  - first:
+      213: -3906686206200833177
+    second: iguanaTailAtack_9
+  - first:
+      213: 2218364818294614394
+    second: iguanaTailAtack_10
+  - first:
+      213: 3053992719439558790
+    second: iguanaTailAtack_11
+  - first:
+      213: 7349564336282964830
+    second: iguanaTailAtack_12
+  - first:
+      213: -5880297987112989337
+    second: iguanaTailAtack_13
+  - first:
+      213: -3757533620479352234
+    second: iguanaTailAtack_14
+  - first:
+      213: 2965679896681685676
+    second: iguanaTailAtack_15
+  - first:
+      213: 3141119720830853817
+    second: iguanaTailAtack_16
+  - first:
+      213: 4850232404546947409
+    second: iguanaTailAtack_17
+  - first:
+      213: -2431167441495901630
+    second: iguanaTailAtack_18
+  - first:
+      213: -8544493409416746914
+    second: iguanaTailAtack_19
+  - first:
+      213: -4202858828970687283
+    second: iguanaTailAtack_20
+  - first:
+      213: -8157048944924590581
+    second: iguanaTailAtack_21
+  - first:
+      213: 1240258439089313638
+    second: iguanaTailAtack_22
+  - first:
+      213: 6649516560388524436
+    second: iguanaTailAtack_23
+  - first:
+      213: -3307330120978440610
+    second: iguanaTailAtack_24
+  - first:
+      213: -2433959648310537614
+    second: iguanaTailAtack_25
+  - first:
+      213: 3220510380376695483
+    second: iguanaTailAtack_26
+  - first:
+      213: 5839539154455982428
+    second: iguanaTailAtack_27
+  - first:
+      213: -3521988815464776654
+    second: iguanaTailAtack_28
+  - first:
+      213: -6047287945889252343
+    second: iguanaTailAtack_29
+  - first:
+      213: 77945625996253171
+    second: iguanaTailAtack_30
+  - first:
+      213: -7447340976594526986
+    second: iguanaTailAtack_31
+  - first:
+      213: 7037829189666221585
+    second: iguanaTailAtack_32
+  - first:
+      213: -5454366155674201892
+    second: iguanaTailAtack_33
+  - first:
+      213: 2544802527565227294
+    second: iguanaTailAtack_34
+  - first:
+      213: 6317534328311041215
+    second: iguanaTailAtack_35
+  - first:
+      213: 7654854217507998348
+    second: iguanaTailAtack_36
+  - first:
+      213: 5237982771397219719
+    second: iguanaTailAtack_37
+  - first:
+      213: 5282318315645733393
+    second: iguanaTailAtack_38
+  - first:
+      213: 4062299109618894750
+    second: iguanaTailAtack_39
+  - first:
+      213: 3928278617814486447
+    second: iguanaTailAtack_40
+  - first:
+      213: -3911115208714326959
+    second: iguanaTailAtack_41
+  - first:
+      213: -4862223190902517626
+    second: iguanaTailAtack_42
+  - first:
+      213: -7318049986268478562
+    second: iguanaTailAtack_43
+  - first:
+      213: 4868001176849872699
+    second: iguanaTailAtack_44
+  - first:
+      213: 4833613896244737146
+    second: iguanaTailAtack_45
+  - first:
+      213: 4419821063386547484
+    second: iguanaTailAtack_46
+  - first:
+      213: -2463919867411963667
+    second: iguanaTailAtack_47
+  - first:
+      213: 5387951545299121697
+    second: iguanaTailAtack_48
+  - first:
+      213: 3642305878322399474
+    second: iguanaTailAtack_49
+  - first:
+      213: 8231304867801829247
+    second: iguanaTailAtack_50
+  - first:
+      213: 3394208065742131484
+    second: iguanaTailAtack_51
+  - first:
+      213: 3312827050249777613
+    second: iguanaTailAtack_52
+  - first:
+      213: -2181131937679480586
+    second: iguanaTailAtack_53
+  - first:
+      213: -3253432949362580690
+    second: iguanaTailAtack_54
+  - first:
+      213: 5141037096242951804
+    second: iguanaTailAtack_55
+  - first:
+      213: -1083853691428403682
+    second: iguanaTailAtack_56
+  - first:
+      213: 6002888503603635888
+    second: iguanaTailAtack_57
+  - first:
+      213: 7725699221346411042
+    second: iguanaTailAtack_58
+  - first:
+      213: -3906253113451670660
+    second: iguanaTailAtack_59
+  - first:
+      213: 3427319116859077682
+    second: iguanaTailAtack_60
+  - first:
+      213: 3263482832431402013
+    second: iguanaTailAtack_61
+  - first:
+      213: -1905846349818150966
+    second: iguanaTailAtack_62
+  - first:
+      213: 6407648964620059526
+    second: iguanaTailAtack_63
+  - first:
+      213: 6727934271405905043
+    second: iguanaTailAtack_64
+  - first:
+      213: -2096127941124225764
+    second: iguanaTailAtack_65
+  - first:
+      213: 5126047501573896054
+    second: iguanaTailAtack_66
+  - first:
+      213: -1205564353690776030
+    second: iguanaTailAtack_67
+  - first:
+      213: -6352761515128080587
+    second: iguanaTailAtack_68
+  - first:
+      213: 3123365170899442497
+    second: iguanaTailAtack_69
+  - first:
+      213: 5152106118232210447
+    second: iguanaTailAtack_70
+  - first:
+      213: 3761962513516628620
+    second: iguanaTailAtack_71
+  - first:
+      213: 4579971930884680284
+    second: iguanaTailAtack_72
+  - first:
+      213: -1148613426065318549
+    second: iguanaTailAtack_73
+  - first:
+      213: -924154304723272067
+    second: iguanaTailAtack_74
+  - first:
+      213: 4210625126060923079
+    second: iguanaTailAtack_75
+  - first:
+      213: 1556296676270629803
+    second: iguanaTailAtack_76
+  - first:
+      213: 221660936744581235
+    second: iguanaTailAtack_77
+  - first:
+      213: 7644071384234070691
+    second: iguanaTailAtack_78
+  - first:
+      213: 3408717359962983425
+    second: iguanaTailAtack_79
+  - first:
+      213: -6112831683238043903
+    second: iguanaTailAtack_80
+  - first:
+      213: -3900633734617724921
+    second: iguanaTailAtack_81
+  - first:
+      213: 3971038996239003335
+    second: iguanaTailAtack_82
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +281,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,12 +290,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +324,327 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: iguanaTailAtack_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 536
+        width: 124
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801a3ba719fdaeaf0800000000000000
+      internalID: -366234603755429624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 536
+        width: 124
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d2c85066643ff40800000000000000
+      internalID: 5761025752330677553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_2
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 536
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142ee64ca1ce7afd0800000000000000
+      internalID: -2330634682432036287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 408
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413fa7ae94c8174a0800000000000000
+      internalID: -6597337730026638572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_4
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 408
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f0c5fa4256adb20800000000000000
+      internalID: 3159949296789098311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_5
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 408
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6de88368e5e47b40800000000000000
+      internalID: 5437223436408122735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 280
+        width: 108
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98be4025499135df0800000000000000
+      internalID: -192782234224890999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_8
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 280
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c2975dccc9c4c90800000000000000
+      internalID: -7184194901994034138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_9
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 280
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b1b7e0899a8c9c0800000000000000
+      internalID: -3906686206200833177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 152
+        width: 116
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79aca08c0739ce10800000000000000
+      internalID: 2218364818294614394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_11
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 152
+        width: 116
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688f2d49236f16a20800000000000000
+      internalID: 3053992719439558790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_12
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 152
+        width: 164
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53960ef2d5eef560800000000000000
+      internalID: 7349564336282964830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_14
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 152
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652adb7941f8adbc0800000000000000
+      internalID: -3757533620479352234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaTailAtack_16
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 24
+        width: 148
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2e8156ebf779b20800000000000000
+      internalID: 3141119720830853817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

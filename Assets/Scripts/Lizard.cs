@@ -10,6 +10,8 @@ public class Lizard : MonoBehaviour
     public bool isGrounded = false;
     public bool facingRight = true;
     public Vector2 force = new Vector2(0f, 5f);
+    private bool attack;
+
     void Start()
     {
         
@@ -30,11 +32,27 @@ public class Lizard : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
         
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            attack = true;
+            Attack();
+        }
 
         if ( (movement.x < 0 && facingRight) || (movement.x > 0 && !facingRight))
         {
             Flip();
         }
+    }
+
+    void Attack()
+    {
+        if (attack)
+        {
+            anim.SetTrigger("attack");
+            attack = false;
+        }
+        anim.SetTrigger("attack");
+
     }
 
     void Jump()
