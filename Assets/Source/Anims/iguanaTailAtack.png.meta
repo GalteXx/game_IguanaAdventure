@@ -355,10 +355,10 @@ TextureImporter:
       name: iguanaTailAtack_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 536
-        width: 124
-        height: 68
+        x: 7
+        y: 198
+        width: 31
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,10 +376,10 @@ TextureImporter:
       name: iguanaTailAtack_1
       rect:
         serializedVersion: 2
-        x: 284
-        y: 536
-        width: 124
-        height: 68
+        x: 71
+        y: 198
+        width: 31
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,10 +397,10 @@ TextureImporter:
       name: iguanaTailAtack_2
       rect:
         serializedVersion: 2
-        x: 548
-        y: 536
-        width: 112
-        height: 64
+        x: 9
+        y: 166
+        width: 28
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,10 +418,10 @@ TextureImporter:
       name: iguanaTailAtack_3
       rect:
         serializedVersion: 2
-        x: 36
-        y: 408
-        width: 112
-        height: 64
+        x: 73
+        y: 166
+        width: 28
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,10 +439,10 @@ TextureImporter:
       name: iguanaTailAtack_4
       rect:
         serializedVersion: 2
-        x: 292
-        y: 408
-        width: 112
-        height: 64
+        x: 9
+        y: 134
+        width: 28
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,10 +460,10 @@ TextureImporter:
       name: iguanaTailAtack_5
       rect:
         serializedVersion: 2
-        x: 548
-        y: 408
-        width: 112
-        height: 64
+        x: 73
+        y: 134
+        width: 28
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,10 +481,10 @@ TextureImporter:
       name: iguanaTailAtack_7
       rect:
         serializedVersion: 2
-        x: 24
-        y: 280
-        width: 108
-        height: 60
+        x: 6
+        y: 102
+        width: 27
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -502,10 +502,10 @@ TextureImporter:
       name: iguanaTailAtack_8
       rect:
         serializedVersion: 2
-        x: 276
-        y: 280
-        width: 112
-        height: 64
+        x: 69
+        y: 102
+        width: 28
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,10 +523,10 @@ TextureImporter:
       name: iguanaTailAtack_9
       rect:
         serializedVersion: 2
-        x: 532
-        y: 280
-        width: 112
-        height: 64
+        x: 5
+        y: 70
+        width: 28
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,10 +544,10 @@ TextureImporter:
       name: iguanaTailAtack_10
       rect:
         serializedVersion: 2
-        x: 16
-        y: 152
-        width: 116
-        height: 76
+        x: 68
+        y: 70
+        width: 29
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,10 +565,10 @@ TextureImporter:
       name: iguanaTailAtack_11
       rect:
         serializedVersion: 2
-        x: 272
-        y: 152
-        width: 116
-        height: 76
+        x: 4
+        y: 38
+        width: 29
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,10 +586,10 @@ TextureImporter:
       name: iguanaTailAtack_12
       rect:
         serializedVersion: 2
-        x: 524
-        y: 152
-        width: 164
-        height: 88
+        x: 67
+        y: 38
+        width: 41
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -607,10 +607,10 @@ TextureImporter:
       name: iguanaTailAtack_14
       rect:
         serializedVersion: 2
-        x: 24
-        y: 24
-        width: 152
-        height: 88
+        x: 6
+        y: 6
+        width: 38
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -628,10 +628,10 @@ TextureImporter:
       name: iguanaTailAtack_16
       rect:
         serializedVersion: 2
-        x: 284
-        y: 24
-        width: 148
-        height: 84
+        x: 71
+        y: 6
+        width: 37
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
