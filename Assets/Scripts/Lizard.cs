@@ -11,7 +11,6 @@ public class Lizard : MonoBehaviour
 
     public bool isGrounded = false;
     public bool facingRight = true;
-    private bool attack;
 
     void Start()
     {
@@ -28,7 +27,15 @@ public class Lizard : MonoBehaviour
         {
             Jump();
         }
-       
+
+        // Attack on LeftShift but can be changed. In work
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
+
+        //
+
         // Set animation to walking if x axis has difference >0 or its not walking, then turn off walking animation
         if (movement.x > 0 || movement.x < 0)
         {
@@ -39,29 +46,18 @@ public class Lizard : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
         
-        // Attack on LeftShift but can be changed. In work
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            attack = true;
-            Attack();
-        }
-
         // Flip if changed direction
         if ( (movement.x < 0 && facingRight) || (movement.x > 0 && !facingRight))
         {
             Flip();
         }
+
     }
 
     void Attack()
     {
-        if (attack)
-        {
-            anim.SetTrigger("attack");
-            attack = false;
-        }
         anim.SetTrigger("attack");
-
+        //anim.ResetTrigger("attack");
     }
 
     void Jump()

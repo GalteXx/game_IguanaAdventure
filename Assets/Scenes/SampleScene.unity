@@ -350,6 +350,7 @@ GameObject:
   - component: {fileID: 2060336283}
   - component: {fileID: 2060336287}
   - component: {fileID: 2060336288}
+  - component: {fileID: 2060336289}
   m_Layer: 0
   m_Name: Iguana
   m_TagString: Player
@@ -483,10 +484,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2060336288}
+  force: {x: 0, y: 9}
   moveSpeed: 5
   isGrounded: 0
   facingRight: 1
-  force: {x: 0, y: 9}
 --- !u!95 &2060336288
 Animator:
   serializedVersion: 3
@@ -506,6 +507,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2060336289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060336282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7646c686489a4db4ca617af1078fd247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!1 &2134219642
 GameObject:
   m_ObjectHideFlags: 0
