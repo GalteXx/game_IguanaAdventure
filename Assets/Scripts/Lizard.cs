@@ -31,7 +31,11 @@ public class Lizard : MonoBehaviour
         // ***=== Jumping section end ===*** \\
 
         // Attack on LeftShift but can be changed. In work
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Attack();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             Attack();
         }
@@ -69,7 +73,6 @@ public class Lizard : MonoBehaviour
     void Attack()
     {
         anim.SetTrigger("attack");
-        //anim.ResetTrigger("attack");
     }
 
     void Jump()
