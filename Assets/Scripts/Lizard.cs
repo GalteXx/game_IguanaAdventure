@@ -92,4 +92,12 @@ public class Lizard : MonoBehaviour
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Water")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

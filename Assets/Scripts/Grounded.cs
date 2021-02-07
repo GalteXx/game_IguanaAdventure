@@ -22,7 +22,9 @@ public class Grounded : MonoBehaviour
         if (collision.collider.tag == "Ground")
         {
             Player.GetComponent<Lizard>().isGrounded = true;
+            
         }
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -30,6 +32,12 @@ public class Grounded : MonoBehaviour
         if (collision.collider.tag == "Ground")
         {
             Player.GetComponent<Lizard>().isGrounded = false;
+            
         }
+        
     }
+
+
+
+    
 }
