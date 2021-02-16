@@ -7,6 +7,10 @@ public class Lizard : MonoBehaviour
     public Animator anim;
     public Vector2 force = new Vector2(0f, 5f);
     public Rigidbody2D rb;
+    [SerializeField] Transform groundCheckCircle;
+    [SerializeField] LayerMask groundLayer;
+
+    const float groundCheckRadius = .2f;
 
     public float moveSpeed = 5f;
     public float hangTime = 2f;
@@ -20,7 +24,7 @@ public class Lizard : MonoBehaviour
         // Checking the side player is going, left or right
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f); // so its either -1 or 1
         transform.position += movement * Time.deltaTime * moveSpeed; // so the position of our player is -1 or 1 * time has passed and ms 
-        
+        GroundCheck();
         // ***=== Jumping section start ===*** \\
         HangManager(); // After player leaves platform timer
 
@@ -67,6 +71,18 @@ public class Lizard : MonoBehaviour
         else
         {
             hangCounter -= Time.deltaTime;
+        }
+    }
+
+    void GroundCheck()
+    {
+        // Check if the object is colliding with other 2d collider that has "Ground" Layer
+        //
+        isGrounded = false;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckCircle.position, groundCheckRadius, groundLayer);
+        if (colliders.Length > 0)
+        {
+            isGrounded = true;
         }
     }
 
