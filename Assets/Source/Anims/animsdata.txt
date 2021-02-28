@@ -13,3 +13,4 @@ Iguana Tail attack - 14 FPS
 Iguana Bite        - 14 FPS
 Iguana Eat         -  8 FPS
 Iguana Walk        - итак норм, оставьте как есть
+Iguana Idle        - 15 FPS
