@@ -9,9 +9,9 @@ public class changeLevelSCR : MonoBehaviour
 
     public GameObject activeLevel;
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             activeLevel.SetActive(true);
         }
@@ -19,11 +19,11 @@ public class changeLevelSCR : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             activeLevel.SetActive(false);
         }
     }
-    */
+    
     
 }
