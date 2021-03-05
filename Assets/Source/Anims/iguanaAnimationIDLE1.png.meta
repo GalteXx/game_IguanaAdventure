@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 8f63fc0aec7b017438bcd100f204bcc9
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6513073565425092244
+    second: iguanaAnimationIDLE1_0
+  - first:
+      213: -8438915881922753331
+    second: iguanaAnimationIDLE1_1
+  - first:
+      213: -3297180092919803598
+    second: iguanaAnimationIDLE1_2
+  - first:
+      213: 6091675113894109382
+    second: iguanaAnimationIDLE1_3
+  - first:
+      213: 633005805560330264
+    second: iguanaAnimationIDLE1_4
+  - first:
+      213: -3019830448856817808
+    second: iguanaAnimationIDLE1_5
+  - first:
+      213: 8981258099842464854
+    second: iguanaAnimationIDLE1_8
+  - first:
+      213: 5547943410517884096
+    second: iguanaAnimationIDLE1_10
+  - first:
+      213: -759216907676087210
+    second: iguanaAnimationIDLE1_17
+  - first:
+      213: -1441425340439431975
+    second: iguanaAnimationIDLE1_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +62,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,12 +71,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +105,159 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: iguanaAnimationIDLE1_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 280
+        width: 124
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496462766e5136a50800000000000000
+      internalID: 6513073565425092244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaAnimationIDLE1_3
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 280
+        width: 132
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0eeb2bd3af98450800000000000000
+      internalID: 6091675113894109382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaAnimationIDLE1_8
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 152
+        width: 140
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cb53538a6d3ac70800000000000000
+      internalID: 8981258099842464854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaAnimationIDLE1_10
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 152
+        width: 140
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc33e933214efc40800000000000000
+      internalID: 5547943410517884096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaAnimationIDLE1_17
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 24
+        width: 140
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c0f76be38b675f0800000000000000
+      internalID: -759216907676087210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iguanaAnimationIDLE1_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 24
+        width: 120
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d47cd43a470ffbe0800000000000000
+      internalID: -1441425340439431975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
