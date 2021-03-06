@@ -11,4 +11,4 @@ https://trello.com/invite/b/O9N3ZH5B/6edf884720336cf1bfecec5739111785/%D0%B4%D0%
 Miro
 https://miro.com/welcome/NJQYTUJ5GkMqz3MPRph52rmOzPmDjXdLliUD4lEnYaTTSL1fjVYUNLu6JY5p1IrM
 
-По всем вопросам: Корсаков Максим "Осуждение Осуждателя Осудителей#7115" (может измениться)
+По всем вопросам: Корсаков Максим
