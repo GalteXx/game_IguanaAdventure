@@ -38,10 +38,12 @@ public class Lizard : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             Attack();
+            anim.SetBool("isAttacking", true);
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             Attack();
+            anim.SetBool("isAttacking", false);
         }
 
         // Set animation to walking if x axis has difference >0 or its not walking, then turn off walking animation
@@ -115,5 +117,7 @@ public class Lizard : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
     }
 }

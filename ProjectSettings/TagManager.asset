@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Water
+  - QuestionBlocks
   layers:
   - Default
   - TransparentFX

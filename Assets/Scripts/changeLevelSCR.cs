@@ -5,7 +5,7 @@ using UnityEngine;
 public class changeLevelSCR : MonoBehaviour
 {
 
-    // Этот скрипт пока не работает, скоро подкручу.
+    
 
     public GameObject activeLevel;
 
