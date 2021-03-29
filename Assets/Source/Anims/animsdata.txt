@@ -14,3 +14,4 @@ Iguana Bite        - 14 FPS
 Iguana Eat         -  8 FPS
 Iguana Walk        - итак норм, оставьте как есть
 Iguana Idle        - 15 FPS
+Rotating tile      - 19 FPS //лежит в тайлах
