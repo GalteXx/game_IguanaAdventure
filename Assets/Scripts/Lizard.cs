@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Lizard : MonoBehaviour
 {
     public Animator anim;
@@ -11,6 +12,7 @@ public class Lizard : MonoBehaviour
     //public GameObject go;
     [SerializeField] Transform groundCheckCircle;
     [SerializeField] LayerMask groundLayer;
+    
 
     const float groundCheckRadius = .2f;
 
