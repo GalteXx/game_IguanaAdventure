@@ -7,12 +7,22 @@ using System;
 public class Fire : MonoBehaviour
 {
     [SerializeField] Light2D torchlight;
+    float speed;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Awake()
+    {
+        speed = 1f;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            torchlight.intensity = 1;
+            if (torchlight.intensity < 0.6)
+            {
+                torchlight.intensity += speed * Time.deltaTime;
+            }
+            
         }
     }
 }
