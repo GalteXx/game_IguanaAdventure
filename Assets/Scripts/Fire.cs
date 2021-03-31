@@ -18,7 +18,7 @@ public class Fire : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (torchlight.intensity < 0.6)
+            if (torchlight.intensity < 0.7)
             {
                 torchlight.intensity += speed * Time.deltaTime;
             }
