@@ -15,7 +15,7 @@ public class Parallax : MonoBehaviour
     {
         target = transform.root;
         mat = GetComponent<SpriteRenderer>().material;
-        offset =  = Vector2.zero;
+        offset = Vector2.zero;
     }
 
     // Update is called once per frame
