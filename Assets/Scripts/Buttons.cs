@@ -4,7 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
-    bool boo = false;
+    bool boo;
+    public void Start()
+    {
+        boo = false;
+    }
     public void Play()
     {
         if (!boo)

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class changeLevelSCR : MonoBehaviour
 {
-
-    
-
     public GameObject activeLevel;
 
     private void OnTriggerEnter2D(Collider2D collision)

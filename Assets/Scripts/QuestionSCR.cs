@@ -12,14 +12,12 @@ public class QuestionSCR : MonoBehaviour
     private void Awake()
     {
         bc = GetComponent<BoxCollider2D>();
-        
     }
 
     void Start()
     {
         
     }
-
     
     void Update()
     {
@@ -31,7 +29,6 @@ public class QuestionSCR : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        
         if (collision.gameObject.tag == "Player")
         {
             if (isPressed)
@@ -42,13 +39,6 @@ public class QuestionSCR : MonoBehaviour
                 if (hp == 0)
                     bc.isTrigger = true;
             }
-            
         }
-
-
     }
-
-    
-
-    
 }

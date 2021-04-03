@@ -7,7 +7,7 @@ public class Lizard : MonoBehaviour
 {
     public Animator anim;
     public Transform checkpoint;
-    public Vector2 force = new Vector2(0f, 5f);
+    public Vector2 force;
     public Rigidbody2D rb;
     //public GameObject go;
     [SerializeField] Transform groundCheckCircle;
@@ -16,24 +16,36 @@ public class Lizard : MonoBehaviour
 
     const float groundCheckRadius = .2f;
 
-    private float moveSpeed = 3.9f;
-    private float hangTime = 2f;
+    float moveSpeed;
+    float hangTime;
     public float currentSpeed;
-    private float hangCounter = 0f;
+    float hangCounter;
 
-    public bool facingRight = true;
+    public bool facingRight;
 
-    private bool isGrounded = false;
-    private bool isAttacking = false;
-    private bool isDead = false;
-    private bool isAttackPressed = false;
+    bool isGrounded;
+    bool isAttacking;
+    bool isDead;
+    bool isAttackPressed;
 
-    private string currentState;
+    string currentState;
 
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_RUN = "Run";
     const string PLAYER_ATTACK = "Attack";
 
+    void Start()
+    {
+        force = new Vector2(0f, 5f);
+        moveSpeed = 3.9f;
+        hangTime = 2f;
+        hangCounter = 0f;
+        facingRight = true;
+        isGrounded = false;
+        isAttacking = false;
+        isDead = false;
+        isAttackPressed = false;
+}
     void Update()
     {
         // Jump on spacebar
