@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,27 +13,26 @@ public class Lizard : MonoBehaviour
     //public GameObject go;
     [SerializeField] Transform groundCheckCircle;
     [SerializeField] LayerMask groundLayer;
+    public Platform platform;
     
 
     const float groundCheckRadius = .2f;
 
-    float moveSpeed;
-    float hangTime;
     public float currentSpeed;
-    float hangCounter;
+    float moveSpeed, hangTime, hangCounter;
 
     public bool facingRight;
 
-    bool isGrounded;
-    bool isAttacking;
-    bool isDead;
-    bool isAttackPressed;
+    bool isGrounded, isAttacking, isDead, isAttackPressed;
 
     string currentState;
-
+    private bool isJumping = false;
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_RUN = "Run";
     const string PLAYER_ATTACK = "Attack";
+    const string PLAYER_FLYING = "IguannaInAir";
+    const string PLAYER_LANDING = "IguannaOnLand";
+    const string PLAYER_JUMPING = "IguannaOnJump";
 
     void Start()
     {
@@ -48,20 +48,37 @@ public class Lizard : MonoBehaviour
 }
     void Update()
     {
-        // Jump on spacebar
-        if (Input.GetButtonDown("Jump") && hangCounter > 0)
-        {
-            Jump();
-        } 
 
-        // Attack on LeftShift but can be changed. In work
-        if (!isAttacking && !isDead) { 
-            if (currentSpeed == 0)
+        /*if (rb.velocity.y > maxspeed)
+        {
+        maxspeed = 0, minspeed = 0
+            maxspeed = rb.velocity.y;
+            Debug.Log(maxspeed);
+        } else if (rb.velocity.y < minspeed)
+        {
+            minspeed = rb.velocity.y;
+            Debug.Log(minspeed);
+        }*/
+
+        //Debug.Log(rb.velocity.y);
+        // 5, -11
+        if (!isDead && !isAttacking)
+        {
+            if (Math.Abs(rb.velocity.y) == 0)
                 ChangeAnimation(PLAYER_IDLE);
+            else if (Math.Abs(rb.velocity.y) > 1)
+                ChangeAnimation(PLAYER_FLYING);
             else if (currentSpeed > 0)
                 ChangeAnimation(PLAYER_RUN);
-            
         }
+
+
+            
+
+        // Jump on spacebar
+        if (Input.GetButtonDown("Jump") && hangCounter > 0)
+            Jump();
+        
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -97,8 +114,25 @@ public class Lizard : MonoBehaviour
     {
         if (collision.collider.tag == "Water")
             Die();
-        
+        if (collision.collider.tag == "Platform")
+        {
+            //Debug.Log("¿Õœ–»Ã");
+            //anim = collision.gameObject.GetComponent<Animator>();
+            platform.RotatePlatform();
+        }
+
     }
+
+    /*void JumpStart()
+    {
+        isJumping = true;
+        JumpFinish();
+    }
+
+    void JumpFinish()
+    {
+        isJumping = false;
+    }*/
 
     void ChangeAnimation(string newState)
     {
@@ -153,14 +187,16 @@ public class Lizard : MonoBehaviour
 
     void Jump()
     {
+        //anim.Play(PLAYER_JUMPING);
+        //Invoke("JumpStart", 0.2f);
         if (Input.GetButtonDown("Jump") && rb.velocity.y > 0 && !isDead)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .3f);
         } else if (Input.GetButtonDown("Jump") && !isDead)
         {
             rb.velocity = force;
-        //gameObject.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
         }
+        
     }
 
     void Flip()
