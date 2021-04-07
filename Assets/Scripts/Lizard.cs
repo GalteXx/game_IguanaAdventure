@@ -91,6 +91,11 @@ public class Lizard : MonoBehaviour
             Respawn();
         }
 
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            platform.RotatePlatform();
+        }
+
     }
 
     private void FixedUpdate()
@@ -114,25 +119,7 @@ public class Lizard : MonoBehaviour
     {
         if (collision.collider.tag == "Water")
             Die();
-        if (collision.collider.tag == "Platform")
-        {
-            //Debug.Log("¿Õœ–»Ã");
-            //anim = collision.gameObject.GetComponent<Animator>();
-            platform.RotatePlatform();
-        }
-
     }
-
-    /*void JumpStart()
-    {
-        isJumping = true;
-        JumpFinish();
-    }
-
-    void JumpFinish()
-    {
-        isJumping = false;
-    }*/
 
     void ChangeAnimation(string newState)
     {

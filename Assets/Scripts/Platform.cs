@@ -9,8 +9,10 @@ public class Platform : MonoBehaviour
 
     private bool isFlipping = false;
 
-    const string flip = "Rotate90";
-    const string unflip = "Rotate270";
+    const string FLIP_180 = "Platform_spin180";
+    const string FLIP_360 = "Platform_spin360";
+    const string FLIP_IDLE = "Platform_idle";
+    const string FLIP_IDLE180 = "Platform_idle180";
 
     void ChangeAnimation(string newState)
     {
@@ -26,23 +28,30 @@ public class Platform : MonoBehaviour
         {
             Debug.Log("Flipping");
             isFlipping = true;
-            ChangeAnimation(flip);
-            Invoke("RotateComplete", .19f);
+            ChangeAnimation(FLIP_180);
+            Invoke("RotateIdle180", 0.19f);
+            
         }
         
     }
 
-    public void RotateComplete()
+    private void RotateIdle180()
+    {
+        ChangeAnimation(FLIP_IDLE180);
+        Invoke("RotateComplete", 3f);
+    }
+
+    private void RotateComplete()
     {
         Debug.Log("Flip complete");
         isFlipping = false;
-        anim.Play(unflip);
-        Invoke("RotateStop", .22f);
+        anim.Play(FLIP_360);
+        Invoke("RotateIdle", .19f);
     }
 
-    public void RotateStop()
+    private void RotateIdle()
     {
-        Debug.Log("Stop");
-        anim.Play("idle");
+        Debug.Log("idle");
+        anim.Play(FLIP_IDLE);
     }
 }
