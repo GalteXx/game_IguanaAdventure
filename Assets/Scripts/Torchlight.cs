@@ -6,8 +6,8 @@ using System;
 
 public class Torchlight : MonoBehaviour
 {
-    [SerializeField] Light2D torchlight;
-    public float fadeoutSpeed;
+    [SerializeField] Light2D torchlight;                              //Iguanas light
+    public float fadeoutSpeed;                                        // burning speed of iguanas light
     void Start()
     {
         
@@ -16,9 +16,9 @@ public class Torchlight : MonoBehaviour
 
     void Update()
     {
-        if (torchlight.intensity >= 0)
+        if (torchlight.intensity >= 0)                                //check iguanas fires intensity (if it is more than 0, light will fade out)
         {
-            torchlight.intensity -= fadeoutSpeed * Time.deltaTime;
+            torchlight.intensity -= fadeoutSpeed * Time.deltaTime;    //iguanas light intensity burning
         }
         
     }

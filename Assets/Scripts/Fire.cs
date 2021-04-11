@@ -6,8 +6,8 @@ using System;
 
 public class Fire : MonoBehaviour
 {
-    [SerializeField] Light2D torchlight;
-    float speed;
+    [SerializeField] Light2D torchlight;                        //Iguanas light
+    float speed;                                                //Speed of ignitation of iguanas light
 
     private void Awake()
     {
@@ -16,11 +16,11 @@ public class Fire : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")                //check connection fire object with iguana
         {
-            if (torchlight.intensity < 1.5)
+            if (torchlight.intensity < 1.5)                      //check iguanas fires intensity
             {
-                torchlight.intensity += speed * Time.deltaTime;
+                torchlight.intensity += speed * Time.deltaTime;  //iguanas light intensity raising
             }
             
         }

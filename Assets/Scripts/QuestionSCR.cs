@@ -4,40 +4,35 @@ using UnityEngine;
 
 public class QuestionSCR : MonoBehaviour
 {
-    BoxCollider2D bc;
-    public int hp;
-    public Lizard player;
-    public bool isPressed;
+    BoxCollider2D bc;                                       //questions box collider
+    public int hp;                                          //questions hp
+    public Lizard player;                                   //Iguana
+    public bool isPressed;                                  //attack button condition
 
     private void Awake()
     {
-        bc = GetComponent<BoxCollider2D>();
-    }
-
-    void Start()
-    {
-        
+        bc = GetComponent<BoxCollider2D>();                 //finding question box collider
     }
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))            //check attack button pressing
         {
-            isPressed = true;
+            isPressed = true;                               //attack button condition == true
         }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")           //check connection question block object with iguana
         {
-            if (isPressed)
+            if (isPressed)                                  //checking attack button condition (if it is pressed)
             {
-                isPressed = false;
+                isPressed = false;                          //attack button condition == false
                 Debug.Log("Hit");
-                hp--;
-                if (hp == 0)
-                    bc.isTrigger = true;
+                hp--;                                       //one questions hp is taken away
+                if (hp == 0)                                //check if questions hp == 0
+                    bc.isTrigger = true;                    //ciguana can walk thrue though the question block
             }
         }
     }
