@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    [SerializeField] Animator anim;
-    private string currentState;
+    [SerializeField] Animator anim; // Declare fields and asks for animator component of Platform gameobject
+    private string currentState; // Current state for ChangeAnimation function
+    private bool isFlipping = false; // current state if current platform is already in flipping process
 
-    private bool isFlipping = false;
-
+    // States for animations. IDLE states are for horizontal and vertical idling position and FLIP are for playing the frames
     const string FLIP_180 = "Platform_spin180";
     const string FLIP_360 = "Platform_spin360";
     const string FLIP_IDLE = "Platform_idle";
     const string FLIP_IDLE180 = "Platform_idle180";
 
+    // Change animation function, checks if current state of the platform is not already same to not change the animation.
     void ChangeAnimation(string newState)
     {
         if (currentState == newState) return; // prevent animation to interrupt itself
@@ -26,7 +27,7 @@ public class Platform : MonoBehaviour
     {
         if (!isFlipping)
         {
-            Debug.Log("Flipping");
+            // If platform was not flipping before the the function was invoked then start animation, play FLIP_180 and after .19f call RotateIdle
             isFlipping = true;
             ChangeAnimation(FLIP_180);
             Invoke("RotateIdle180", 0.19f);
@@ -37,21 +38,22 @@ public class Platform : MonoBehaviour
 
     private void RotateIdle180()
     {
+        // Flip idle places platform horiztally for 3 seconds Invokes RotateComplete
         ChangeAnimation(FLIP_IDLE180);
         Invoke("RotateComplete", 3f);
     }
 
+    // Finishes the animation and allows user to flip the platform again then calls RotateIdle function after the FLIP_360 animation finishes
     private void RotateComplete()
     {
-        Debug.Log("Flip complete");
         isFlipping = false;
         anim.Play(FLIP_360);
         Invoke("RotateIdle", .19f);
     }
 
+    // Call the last state of the platform that turns platform vertically
     private void RotateIdle()
     {
-        Debug.Log("idle");
         anim.Play(FLIP_IDLE);
     }
 }
