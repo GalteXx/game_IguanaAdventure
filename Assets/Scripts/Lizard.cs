@@ -85,8 +85,8 @@ public class Lizard : MonoBehaviour
             Respawn();
         
         // Temporary rotates platform on O button
-        if (Input.GetKeyDown(KeyCode.O))
-            platform.RotatePlatform();
+       if (Input.GetKeyDown(KeyCode.O))
+           platform.RotatePlatform();
         
 
     }
@@ -112,6 +112,16 @@ public class Lizard : MonoBehaviour
         // Dies if our player touches the water. Wasser macht die Leguan tot! Das Wasser ist schlecht! Das Wasser war nie gut!
         if (collision.collider.tag == "Water")
             Die();
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        // the platform turns when it is attacked by Iguana
+        if (collision.collider.tag == "Platform" && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Debug.Log("Attack Platform");
+            platform.RotatePlatform();
+        }
     }
 
     void ChangeAnimation(string newState)
