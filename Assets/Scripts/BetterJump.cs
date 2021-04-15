@@ -11,7 +11,7 @@ public class BetterJump : MonoBehaviour
 
     void Awake()
     {
-        // Gets RB compronent of script owner
+        // Gets RB component of script owner
         rb = GetComponent<Rigidbody2D>();
     }
 

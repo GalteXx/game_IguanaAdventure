@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    // 
     Transform target;
     Material mat;
     Vector2 offset;

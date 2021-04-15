@@ -4,23 +4,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
-    bool boo;
+    bool flag;
     public void Start()
     {
-        boo = false;
+        flag = false;
     }
+    // func to switch scene
     public void Play()
     {
-        if (!boo)
+        // preventing multiple clicks on the Play button
+        if (!flag)
         {
             FindObjectOfType<MenuIguana>().menuWalk = true;
-            boo = true;
+            flag = true;
         }
         else if (!FindObjectOfType<MenuIguana>().menuWalk)
         {
             SceneManager.LoadScene(0);
         }
     }
+    // some funcs to see player's profile, to share the game, to like the game and look for information about the game. Until our game appears on the Steam there will be links to our team members' VK profiles
     public void User()
     {
         Application.OpenURL("https://vk.com/mgoryachev1");
