@@ -166,7 +166,7 @@ public class Lizard : MonoBehaviour
             }
         }
     }
-
+    // switching the flag to false
     void AttackComplete()
     {
         isAttacking = false;
