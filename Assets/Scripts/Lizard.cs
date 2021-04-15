@@ -17,8 +17,7 @@ public class Lizard : MonoBehaviour
     [SerializeField] Transform groundCheckCircle;
     // Layer that makes isgrounded boolean true
     [SerializeField] LayerMask groundLayer;
-    
-    
+
     // Ground checker circle under the player (groundCheckCircle variable). This circle must have radius
     const float groundCheckRadius = .2f;
  
@@ -44,9 +43,9 @@ public class Lizard : MonoBehaviour
         hangTime = 2f;
         hangCounter = 0f;
         facingRight = true;
-        isGrounded = false;
+        isGrounded = false; 
         isAttacking = false;
-        isDead = false;
+        isDead = false; 
         isAttackPressed = false;
 }
     void Update()
@@ -59,11 +58,11 @@ public class Lizard : MonoBehaviour
         if (!isDead && !isAttacking)
         {
             if (rb.velocity.y == 0 && rb.velocity.x == 0)
-                ChangeAnimation(PLAYER_IDLE);
+                ChangeAnimation(PLAYER_IDLE); 
             else if (Math.Abs(rb.velocity.y) > 1)
-                ChangeAnimation(PLAYER_FLYING);
-            else if (rb.velocity.x > 0 && isGrounded)
-                ChangeAnimation(PLAYER_RUN);
+                ChangeAnimation(PLAYER_FLYING); 
+            else if (rb.velocity.x > 0 && isGrounded) 
+                ChangeAnimation(PLAYER_RUN); 
         }
 
 
@@ -100,18 +99,18 @@ public class Lizard : MonoBehaviour
         // Movement calculations and math
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f); // so its either -1 or 1
         transform.position += movement * Time.deltaTime * moveSpeed; // so the position of our player is -1 or 1 * time has passed and ms 
-        currentSpeed = Mathf.Abs(movement.x * moveSpeed);
-
+        currentSpeed = Mathf.Abs(movement.x * moveSpeed); // changing walking speed
+        
         // Flip the player if he moves to the another side
         if ((movement.x < 0 && facingRight) || (movement.x > 0 && !facingRight))
-            Flip();
+            Flip(); // MONKEY FLIP
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Dies if our player touches the water. Wasser macht die Leguan tot! Das Wasser ist schlecht! Das Wasser war nie gut!
         if (collision.collider.tag == "Water")
-            Die();
+            Die(); // Iguana isn't Kurt Cobain :<
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -119,8 +118,8 @@ public class Lizard : MonoBehaviour
         // the platform turns when it is attacked by Iguana
         if (collision.collider.tag == "Platform" && Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Debug.Log("Attack Platform");
-            platform.RotatePlatform();
+            Debug.Log("Attack Platform"); // logging
+            platform.RotatePlatform(); // rotating platform
         }
     }
 
@@ -156,12 +155,12 @@ public class Lizard : MonoBehaviour
         if (isAttackPressed)
         {
             // Set it to false and if he is not attacking already and is not dead atm
-            isAttackPressed = false;
+            isAttackPressed = false; // switching the flag to false
             if (!isAttacking && !isDead)
             {
                 // Set attacking to true and change animation, after .2 seconds call AttackComplete wich will return state to normal
-                isAttacking = true;
-                ChangeAnimation(PLAYER_ATTACK);
+                isAttacking = true; // switching the flag to true
+                ChangeAnimation(PLAYER_ATTACK); // Iguana's attack
                 Invoke("AttackComplete", .2f);
             }
         }

@@ -8,7 +8,8 @@ public class MenuIguana : MonoBehaviour
     public GameObject canvas;
     // Start is called before the first frame update
     void Start()
-    { 
+    {
+        // default values
         transform.position = new Vector3(-5.5f, -3, 1);
         menuWalk = false;
     }

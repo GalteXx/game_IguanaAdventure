@@ -15,11 +15,13 @@ public class Buttons : MonoBehaviour
         // preventing multiple clicks on the Play button
         if (!flag)
         {
+            // switching flags to true
             FindObjectOfType<MenuIguana>().menuWalk = true;
             flag = true;
         }
         else if (!FindObjectOfType<MenuIguana>().menuWalk)
         {
+            // loading another scene
             SceneManager.LoadScene(0);
         }
     }
