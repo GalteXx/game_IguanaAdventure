@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class QuestionSCR : MonoBehaviour
 {
+    [SerializeField] Sprite breakBox;
+    [SerializeField] SpriteRenderer sp;
     BoxCollider2D bc;                                       //questions box collider
     public int hp;                                          //questions hp
     public Lizard player;                                   //Iguana
@@ -11,6 +13,7 @@ public class QuestionSCR : MonoBehaviour
 
     private void Awake()
     {
+        sp = GetComponent<SpriteRenderer>();
         bc = GetComponent<BoxCollider2D>();                 //finding question box collider
     }
     
@@ -32,7 +35,12 @@ public class QuestionSCR : MonoBehaviour
                 Debug.Log("Hit");
                 hp--;                                       //one questions hp is taken away
                 if (hp == 0)                                //check if questions hp == 0
+                {
+                    sp.sprite = breakBox;
                     bc.isTrigger = true;                    //ciguana can walk thrue though the question block
+                }                                
+                                                                                     
+
             }
         }
     }
