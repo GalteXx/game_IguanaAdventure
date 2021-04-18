@@ -57,7 +57,7 @@ public class Lizard : MonoBehaviour
                 ChangeAnimation(PLAYER_IDLE); 
             else if (Math.Abs(rb.velocity.y) > 1)
                 ChangeAnimation(PLAYER_FLYING); 
-            else if (rb.velocity.x > 0 && isGrounded) 
+            else //if (Math.Abs(rb.velocity.x) > 0.1f && isGrounded) 
                 ChangeAnimation(PLAYER_RUN); 
         }
 
@@ -226,7 +226,7 @@ public class Lizard : MonoBehaviour
         // If the player dead, then reset movespeed to 5 as it was and teleport the player to the checkpoint
         if (isDead) { 
             isDead = false;
-            moveSpeed = 5f;
+            moveSpeed = 3.9f;
             transform.position = new Vector3(checkpoint.position.x, checkpoint.position.y);
         }
     }
