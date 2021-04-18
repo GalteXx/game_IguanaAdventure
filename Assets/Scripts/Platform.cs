@@ -14,7 +14,10 @@ public class Platform : MonoBehaviour
     const string FLIP_IDLE = "Platform_idle";
     const string FLIP_IDLE180 = "Platform_idle180";
 
-    // Change animation function, checks if current state of the platform is not already same to not change the animation.
+    /// <summary>
+    /// Change animation function, checks if current state of the platform is not already same to not change the animation.
+    /// </summary>
+    /// <param name="newState"></param>
     void ChangeAnimation(string newState)
     {
         if (currentState == newState) return; // prevent animation to interrupt itself
@@ -22,7 +25,9 @@ public class Platform : MonoBehaviour
         anim.Play(newState); // play new state
         currentState = newState; // reassign currentState
     }
-
+    /// <summary>
+    /// Rotates platform to horizontal
+    /// </summary>
     public void RotatePlatform()
     {
         if (!isFlipping)
@@ -35,7 +40,9 @@ public class Platform : MonoBehaviour
         }
         
     }
-
+    /// <summary>
+    /// Lets it be horizontal for 3 seconds
+    /// </summary>
     private void RotateIdle180()
     {
         // Flip idle places platform horiztally for 3 seconds Invokes RotateComplete
@@ -43,7 +50,9 @@ public class Platform : MonoBehaviour
         Invoke("RotateComplete", 3f);
     }
 
-    // Finishes the animation and allows user to flip the platform again then calls RotateIdle function after the FLIP_360 animation finishes
+    /// <summary>
+    /// Finishes the animation and allows user to flip the platform again then calls RotateIdle function after the FLIP_360 animation finishes
+    /// </summary>
     private void RotateComplete()
     {
         isFlipping = false;
@@ -51,7 +60,9 @@ public class Platform : MonoBehaviour
         Invoke("RotateIdle", .19f);
     }
 
-    // Call the last state of the platform that turns platform vertically
+    /// <summary>
+    /// Call the last state of the platform that turns platform vertically
+    /// </summary>
     private void RotateIdle()
     {
         anim.Play(FLIP_IDLE);

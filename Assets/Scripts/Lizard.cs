@@ -7,26 +7,19 @@ using UnityEngine;
 public class Lizard : MonoBehaviour
 {
     // References for components of Iguanna GameObject
-    public Animator anim;
-    public Transform checkpoint;
-    public Vector2 force;
-    public Rigidbody2D rb;
-    public Platform platform;
+    [SerializeField] Animator anim;
+    [SerializeField] Transform checkpoint;
+    [SerializeField] Vector2 force;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Platform platform; // Platform script
+    [SerializeField] Transform groundCheckCircle; // The object that checks iguanna's if iguanna is on the ground or not
+    [SerializeField] LayerMask groundLayer; // Layer that makes isgrounded boolean true
+    [SerializeField] float currentSpeed;
 
-    // The object that checks iguanna's if iguanna is on the ground or not
-    [SerializeField] Transform groundCheckCircle;
-    // Layer that makes isgrounded boolean true
-    [SerializeField] LayerMask groundLayer;
-
-    // Ground checker circle under the player (groundCheckCircle variable). This circle must have radius
-    const float groundCheckRadius = .2f;
- 
-    public float currentSpeed, Yspeed, Xspeed;
+    const float groundCheckRadius = .2f; // Ground checker circle under the player (groundCheckCircle variable). This circle must have radius
     float moveSpeed, hangTime, hangCounter;
-
-    // Boolean states of Iguanna
-    public bool isGrounded;
-    bool isAttacking, isDead, isAttackPressed, facingRight;
+    
+    bool isGrounded, isAttacking, isDead, isAttackPressed, facingRight; // Boolean states of Iguanna
 
     // States for animations
     string currentState;
@@ -35,12 +28,15 @@ public class Lizard : MonoBehaviour
     const string PLAYER_ATTACK = "Attack";
     const string PLAYER_FLYING = "IguannaInAir";
 
+    /// <summary>
+    /// On game start methods, sets all start function
+    /// </summary>
     void Start()
     {
         // On start settings and declares
         force = new Vector2(0f, 5f);
         moveSpeed = 3.9f;
-        hangTime = 2f;
+        hangTime = .2f;
         hangCounter = 0f;
         facingRight = true;
         isGrounded = false; 
@@ -48,11 +44,11 @@ public class Lizard : MonoBehaviour
         isDead = false; 
         isAttackPressed = false;
 }
+    /// <summary>
+    /// Updates every frame (can vary because different PCs)
+    /// </summary>
     void Update()
     {
-
-        Yspeed = rb.velocity.y;
-        Xspeed = rb.velocity.x;
 
         // Animation handler IDLE, FLYING, RUNNING
         if (!isDead && !isAttacking)
@@ -89,7 +85,9 @@ public class Lizard : MonoBehaviour
         
 
     }
-
+    /// <summary>
+    /// Updates every fixed amount of frames. Here updates physics and movements
+    /// </summary>
     private void FixedUpdate()
     {
         // Checks if there is a ground layer under feet and takes care of jump timer
@@ -105,14 +103,20 @@ public class Lizard : MonoBehaviour
         if ((movement.x < 0 && facingRight) || (movement.x > 0 && !facingRight))
             Flip(); // MONKEY FLIP
     }
-
+    /// <summary>
+    /// Executes on script owner enters another collision 
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Dies if our player touches the water. Wasser macht die Leguan tot! Das Wasser ist schlecht! Das Wasser war nie gut!
         if (collision.collider.tag == "Water")
             Die(); // Iguana isn't Kurt Cobain :<
     }
-
+    /// <summary>
+    /// Calls for every collider2d elements touching script owner's collision
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionStay2D(Collision2D collision)
     {
         // the platform turns when it is attacked by Iguana
@@ -122,7 +126,10 @@ public class Lizard : MonoBehaviour
             platform.RotatePlatform(); // rotating platform
         }
     }
-
+    /// <summary>
+    /// This sunction changes animation to newState param
+    /// </summary>
+    /// <param name="newState"></param>
     void ChangeAnimation(string newState)
     {
         if (currentState == newState) return; // prevent animation to interrupt itself
@@ -130,7 +137,9 @@ public class Lizard : MonoBehaviour
         anim.Play(newState); // play new state
         currentState = newState; // reassign currentState
     }
-
+    /// <summary>
+    /// Handles extra time player to jump after he has nothing under his lizard's paws (.2f sec)
+    /// </summary>
     void HangManager()
     {
         // If the player is grounden, resets timer else (is in the air) timer is ticking
@@ -139,7 +148,9 @@ public class Lizard : MonoBehaviour
         else
             hangCounter -= Time.deltaTime;
     }
-
+    /// <summary>
+    /// Checks if there is a collider with groundLayer and if true sets isGround to TRUE else FALSE
+    /// </summary>
     void GroundCheck()
     {
         // Check if the object is colliding with other 2d collider that has "Ground" Layer
@@ -148,7 +159,9 @@ public class Lizard : MonoBehaviour
         if (colliders.Length > 0)
             isGrounded = true;
     }
-
+    /// <summary>
+    /// Attack animation handler
+    /// </summary>
     void Attack()
     {
         // If attack is pressed
@@ -165,12 +178,16 @@ public class Lizard : MonoBehaviour
             }
         }
     }
-    // switching the flag to false
+    /// <summary>
+    /// A part of attack animation handler
+    /// </summary>
     void AttackComplete()
     {
         isAttacking = false;
     }
-
+    /// <summary>
+    /// Jump executer handler
+    /// </summary>
     void Jump()
     {
         // If the jump button is pressed for long time, jump higher else lower
@@ -180,7 +197,9 @@ public class Lizard : MonoBehaviour
             rb.velocity = force;
         
     }
-
+    /// <summary>
+    /// Flips iguana current animation frame 180* depends on what velocity.x it has
+    /// </summary>
     void Flip()
     {
         // Flip the character if he is not dead on 180* left or right
@@ -189,7 +208,9 @@ public class Lizard : MonoBehaviour
             transform.Rotate(0f, 180f, 0f);
         }
     }
-
+    /// <summary>
+    /// Changes animation, sets boolean and ms when player dies
+    /// </summary>
     void Die()
     {
         // Changes anim to player_idle, sets the isDead statement and sets MS to zero
@@ -197,7 +218,9 @@ public class Lizard : MonoBehaviour
         isDead = true;
         moveSpeed = 0;
     }
-
+    /// <summary>
+    /// Teleports iguana to checkpoint and resets all variables
+    /// </summary>
     void Respawn()
     {
         // If the player dead, then reset movespeed to 5 as it was and teleport the player to the checkpoint
