@@ -117,15 +117,16 @@ public class Lizard : MonoBehaviour
     /// Calls for every collider2d elements touching script owner's collision
     /// </summary>
     /// <param name="collision"></param>
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         // the platform turns when it is attacked by Iguana
-        if (collision.collider.tag == "Platform" && Input.GetKeyDown(KeyCode.LeftShift))
+        if (collision.CompareTag("Platform") && Input.GetKeyDown(KeyCode.LeftShift))
         {
             Debug.Log("Attack Platform"); // logging
             platform.RotatePlatform(); // rotating platform
         }
     }
+
     /// <summary>
     /// This sunction changes animation to newState param
     /// </summary>

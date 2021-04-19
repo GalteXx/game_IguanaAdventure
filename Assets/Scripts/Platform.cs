@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
+    [SerializeField] CircleCollider2D cc1;
+    [SerializeField] CircleCollider2D cc2;
+
     [SerializeField] Animator anim; // Declare fields and asks for animator component of Platform gameobject
     private string currentState; // Current state for ChangeAnimation function
     private bool isFlipping = false; // current state if current platform is already in flipping process
@@ -36,7 +39,8 @@ public class Platform : MonoBehaviour
             isFlipping = true;
             ChangeAnimation(FLIP_180);
             Invoke("RotateIdle180", 0.19f);
-            
+            cc1.isTrigger = true;
+            cc2.isTrigger = true;
         }
         
     }
@@ -48,6 +52,8 @@ public class Platform : MonoBehaviour
         // Flip idle places platform horiztally for 3 seconds Invokes RotateComplete
         ChangeAnimation(FLIP_IDLE180);
         Invoke("RotateComplete", 3f);
+        cc1.isTrigger = true;
+        cc2.isTrigger = true;
     }
 
     /// <summary>
@@ -58,6 +64,7 @@ public class Platform : MonoBehaviour
         isFlipping = false;
         anim.Play(FLIP_360);
         Invoke("RotateIdle", .19f);
+
     }
 
     /// <summary>
@@ -66,5 +73,7 @@ public class Platform : MonoBehaviour
     private void RotateIdle()
     {
         anim.Play(FLIP_IDLE);
+        cc1.isTrigger = false;
+        cc2.isTrigger = false;
     }
 }
