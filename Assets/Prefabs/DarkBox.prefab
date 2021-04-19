@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50084f0b36cc7a841a6e882096ba0684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakBox: {fileID: 6920917483583536696, guid: ec73734253870784a8d7cd465cb52815, type: 3}
+  breakBox: {fileID: -6919361322597451206, guid: ec73734253870784a8d7cd465cb52815, type: 3}
   sp: {fileID: 1971468724812953845}
   hp: 3
   player: {fileID: 0}
