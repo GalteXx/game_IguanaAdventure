@@ -73,6 +73,7 @@ public class Platform : MonoBehaviour
     private void RotateIdle()
     {
         anim.Play(FLIP_IDLE);
+        
         cc1.isTrigger = false;
         cc2.isTrigger = false;
     }
