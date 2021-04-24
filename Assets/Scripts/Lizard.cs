@@ -14,11 +14,12 @@ public class Lizard : MonoBehaviour
     [SerializeField] Platform platform; // Platform script
     [SerializeField] Transform groundCheckCircle; // The object that checks iguanna's if iguanna is on the ground or not
     [SerializeField] LayerMask groundLayer; // Layer that makes isgrounded boolean true
-    [SerializeField] float currentSpeed;
+
 
     const float groundCheckRadius = .2f; // Ground checker circle under the player (groundCheckCircle variable). This circle must have radius
     float moveSpeed, hangTime, hangCounter;
-    
+    private float currentSpeed;
+
     bool isGrounded, isAttacking, isDead, isAttackPressed, facingRight; // Boolean states of Iguanna
 
     // States for animations
@@ -53,9 +54,9 @@ public class Lizard : MonoBehaviour
         // Animation handler IDLE, FLYING, RUNNING
         if (!isDead && !isAttacking)
         {
-            if (rb.velocity.y == 0 && rb.velocity.x == 0)
+            if (rb.velocity.y == 0 && Input.GetAxis("Horizontal") == 0)
                 ChangeAnimation(PLAYER_IDLE); 
-            else if (Math.Abs(rb.velocity.y) > 1)
+            else if (!isGrounded)
                 ChangeAnimation(PLAYER_FLYING); 
             else //if (Math.Abs(rb.velocity.x) > 0.1f && isGrounded) 
                 ChangeAnimation(PLAYER_RUN); 
@@ -126,7 +127,6 @@ public class Lizard : MonoBehaviour
             platform.RotatePlatform(); // rotating platform
         }
     }
-
     /// <summary>
     /// This sunction changes animation to newState param
     /// </summary>
