@@ -26,6 +26,8 @@ public class Lizard : MonoBehaviour
     string currentState;
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_RUN = "Run";
+    const string PLAYER_DIE = "Dead";
+    const string PLAYER_DYING = "IguanaDie";
     const string PLAYER_ATTACK = "Attack";
     const string PLAYER_FLYING = "IguannaInAir";
 
@@ -50,7 +52,6 @@ public class Lizard : MonoBehaviour
     /// </summary>
     void Update()
     {
-
         // Animation handler IDLE, FLYING, RUNNING
         if (!isDead && !isAttacking)
         {
@@ -215,10 +216,16 @@ public class Lizard : MonoBehaviour
     void Die()
     {
         // Changes anim to player_idle, sets the isDead statement and sets MS to zero
-        ChangeAnimation(PLAYER_IDLE);
+        ChangeAnimation(PLAYER_DYING);
         isDead = true;
         moveSpeed = 0;
+        Invoke("FinishDie", .55f);
     }
+    void FinishDie()
+    {
+        ChangeAnimation(PLAYER_DIE);
+    }
+
     /// <summary>
     /// Teleports iguana to checkpoint and resets all variables
     /// </summary>
