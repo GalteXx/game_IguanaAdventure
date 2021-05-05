@@ -42,7 +42,7 @@ public class Platform : MonoBehaviour
             cc1.isTrigger = true;
             cc2.isTrigger = true;
         }
-        
+
     }
     /// <summary>
     /// Lets it be horizontal for 3 seconds
@@ -73,8 +73,21 @@ public class Platform : MonoBehaviour
     private void RotateIdle()
     {
         anim.Play(FLIP_IDLE);
-        
+
         cc1.isTrigger = false;
         cc2.isTrigger = false;
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+
+        // the platform turns when it is attacked by Iguana
+        if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Debug.Log("Attack Platform"); // logging
+            RotatePlatform(); // rotating platform
+        }
+
+    }
+
 }
