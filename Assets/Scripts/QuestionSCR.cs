@@ -6,10 +6,10 @@ public class QuestionSCR : MonoBehaviour
 {
     [SerializeField] Sprite breakBox;
     [SerializeField] SpriteRenderer sp;
-    BoxCollider2D bc;                                       //questions box collider
-    public int hp;                                          //questions hp
-    public Lizard player;                                   //Iguana
-    public bool isPressed;                                  //attack button condition
+    [SerializeField] BoxCollider2D bc;                                       //questions box collider
+    [SerializeField] int hp;                                          //questions hp
+    [SerializeField] Lizard player;                                   //Iguana
+    [SerializeField] bool isPressed;                                  //attack button condition
 
     private void Awake()
     {

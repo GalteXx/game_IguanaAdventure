@@ -7,7 +7,7 @@ using System;
 public class Fire : MonoBehaviour
 {
     [SerializeField] Light2D torchlight;                        //Iguanas light
-    float speed;                                                //Speed of ignitation of iguanas light
+    private float speed;                                                //Speed of ignitation of iguanas light
 
     private void Awake()
     {

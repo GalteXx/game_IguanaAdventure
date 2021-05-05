@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class changeLevelSCR : MonoBehaviour
+public class ChangeLevelSCR : MonoBehaviour
 {
     [SerializeField] GameObject activeLevel;                          //the level at which iguana is located
 

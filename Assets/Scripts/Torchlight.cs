@@ -7,7 +7,7 @@ using System;
 public class Torchlight : MonoBehaviour
 {
     [SerializeField] Light2D torchlight;                              //Iguanas light
-    public float fadeoutSpeed;                                        // burning speed of iguanas light
+    [SerializeField] float fadeoutSpeed;                                        // burning speed of iguanas light
     void Start()
     {
         
