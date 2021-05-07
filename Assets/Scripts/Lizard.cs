@@ -113,23 +113,12 @@ public class Lizard : MonoBehaviour
     {
         // Dies if our player touches the water. Wasser macht die Leguan tot! Das Wasser ist schlecht! Das Wasser war nie gut!
         if (collision.collider.tag == "Water")
-            Die(); // Iguana isn't Kurt Cobain :<
-    }
-    /// <summary>
-    /// Calls for every collider2d elements touching script owner's collision
-    /// </summary>
-    /// <param name="collision"></param>
-    /*private void OnTriggerStay2D(Collider2D collision)
-    {
-        Debug.Log("Staying");
-        // the platform turns when it is attacked by Iguana
-        if (collision.CompareTag("Platform") && Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Debug.Log("Attack Platform"); // logging
-            platform.RotatePlatform(); // rotating platform
+            isDead = true;
+            Die(); // Iguana isn't Kurt Cobain :<
         }
-    }*/
-
+            
+    }
 
     /// <summary>
     /// This sunction changes animation to newState param
@@ -220,7 +209,6 @@ public class Lizard : MonoBehaviour
     {
         // Changes anim to player_idle, sets the isDead statement and sets MS to zero
         ChangeAnimation(PLAYER_DYING);
-        isDead = true;
         moveSpeed = 0;
         Invoke("FinishDie", .55f);
     }
