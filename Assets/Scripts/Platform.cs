@@ -82,7 +82,8 @@ public class Platform : MonoBehaviour
     {
 
         // the platform turns when it is attacked by Iguana
-        if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.LeftShift))
+        //if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.LeftShift))
+        if (collision.isTrigger)
         {
             Debug.Log("Attack Platform"); // logging
             RotatePlatform(); // rotating platform
