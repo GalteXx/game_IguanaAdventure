@@ -11,7 +11,7 @@ public class Torchlight : MonoBehaviour
     void Start()
     {
         
-        fadeoutSpeed = 0.05f;
+        fadeoutSpeed = 0.2f;
     }
 
     void Update()

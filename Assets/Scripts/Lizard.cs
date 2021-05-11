@@ -68,8 +68,11 @@ public class Lizard : MonoBehaviour
         // Dies if our players torchlight has gone out.
         if (torchlight.intensity <= 0.15f)
         {
-            isDead = true;
-            Die();
+            if(!isDead)
+            {
+                isDead = true;
+                Die();
+            }
             
         }
             
