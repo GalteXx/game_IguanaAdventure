@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 
 public class Lizard : MonoBehaviour
@@ -14,7 +15,7 @@ public class Lizard : MonoBehaviour
     [SerializeField] Platform platform; // Platform script
     [SerializeField] Transform groundCheckCircle; // The object that checks iguanna's if iguanna is on the ground or not
     [SerializeField] LayerMask groundLayer; // Layer that makes isgrounded boolean true
-
+    private Light2D torchlight;
 
     const float groundCheckRadius = .2f; // Ground checker circle under the player (groundCheckCircle variable). This circle must have radius
     float moveSpeed, hangTime, hangCounter;
@@ -46,6 +47,7 @@ public class Lizard : MonoBehaviour
         isAttacking = false;
         isDead = false; 
         isAttackPressed = false;
+        torchlight = GetComponentInChildren<Light2D>();
 }
     /// <summary>
     /// Updates every frame (can vary because different PCs)
@@ -63,7 +65,13 @@ public class Lizard : MonoBehaviour
                 ChangeAnimation(PLAYER_RUN); 
         }
 
-
+        // Dies if our players torchlight has gone out.
+        if (torchlight.intensity <= 0.15f)
+        {
+            isDead = true;
+            Die();
+            
+        }
             
 
         // Checks if the Jump is pressed and there is time on timer
@@ -226,6 +234,7 @@ public class Lizard : MonoBehaviour
         if (isDead) { 
             isDead = false;
             moveSpeed = 3.9f;
+            torchlight.intensity = 1.5f;
             transform.position = new Vector3(checkpoint.position.x, checkpoint.position.y);
         }
     }
