@@ -16,7 +16,8 @@ public class Lizard : MonoBehaviour
     [SerializeField] Transform groundCheckCircle; // The object that checks iguanna's if iguanna is on the ground or not
     [SerializeField] LayerMask groundLayer; // Layer that makes isgrounded boolean true
     private Light2D torchlight;
-
+    [SerializeField] GameObject pauseMenu;
+    private bool menuOpend = false;
     const float groundCheckRadius = .2f; // Ground checker circle under the player (groundCheckCircle variable). This circle must have radius
     float moveSpeed, hangTime, hangCounter;
     private float currentSpeed;
@@ -95,7 +96,16 @@ public class Lizard : MonoBehaviour
         // Temporary rotates platform on O button
        if (Input.GetKeyDown(KeyCode.O))
            platform.RotatePlatform();
-        
+       if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu.SetActive(!menuOpend);
+            if (!menuOpend)
+                Time.timeScale = 0;
+            if(menuOpend)
+                Time.timeScale = 1;
+            menuOpend = !menuOpend;
+        }
+
 
     }
     /// <summary>
