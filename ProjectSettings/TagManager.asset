@@ -9,6 +9,7 @@ TagManager:
   - QuestionBlocks
   - Platform
   - Hitbox
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

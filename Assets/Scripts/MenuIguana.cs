@@ -22,7 +22,7 @@ public class MenuIguana : MonoBehaviour
         // checking 2 conditions for character movement
         if (menuWalk)
         {
-            transform.position += new Vector3(0.05f, 0, 0); // character movement
+            transform.position += new Vector3(0.15f, 0, 0); // character movement
             anim.Play("Run");
         }
         if (transform.position.x >= 11)

@@ -9,7 +9,8 @@ public class Lizard : MonoBehaviour
 {
     // References for components of Iguanna GameObject
     [SerializeField] Animator anim;
-    [SerializeField] Transform checkpoint;
+    private float checkX; // x position of checkpoint
+    private float checkY; // y position of checkpoint
     [SerializeField] Vector2 force;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Platform platform; // Platform script
@@ -21,7 +22,9 @@ public class Lizard : MonoBehaviour
     const float groundCheckRadius = .2f; // Ground checker circle under the player (groundCheckCircle variable). This circle must have radius
     float moveSpeed, hangTime, hangCounter;
     private float currentSpeed;
-
+    [SerializeField] GameObject finalBlackSquare; 
+    [SerializeField] float timer;
+    float _timer;
     bool isGrounded, isAttacking, isDead, isAttackPressed, facingRight; // Boolean states of Iguanna
 
     // States for animations
@@ -49,6 +52,7 @@ public class Lizard : MonoBehaviour
         isDead = false; 
         isAttackPressed = false;
         torchlight = GetComponentInChildren<Light2D>();
+        _timer = timer;
 }
     /// <summary>
     /// Updates every frame (can vary because different PCs)
@@ -76,7 +80,14 @@ public class Lizard : MonoBehaviour
             }
             
         }
-            
+        //Shows black screen after 3 sec from death 
+        if (isDead)
+        {
+            if (timer > 0)
+                timer -= Time.deltaTime;
+            else
+                finalBlackSquare.SetActive(true);
+        }
 
         // Checks if the Jump is pressed and there is time on timer
         if (Input.GetButtonDown("Jump") && hangCounter > 0)
@@ -135,10 +146,22 @@ public class Lizard : MonoBehaviour
         // Dies if our player touches the water. Wasser macht die Leguan tot! Das Wasser ist schlecht! Das Wasser war nie gut!
         if (collision.collider.tag == "Water")
         {
+            torchlight.intensity = 0.4f;
             isDead = true;
             Die(); // Iguana isn't Kurt Cobain :<
         }
+        
             
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //find new checkpoint position
+        if (collision.gameObject.tag == "Checkpoint")
+        {
+            checkX = collision.transform.position.x;
+            checkY = collision.transform.position.y;
+        }
     }
 
     /// <summary>
@@ -232,6 +255,8 @@ public class Lizard : MonoBehaviour
         ChangeAnimation(PLAYER_DYING);
         moveSpeed = 0;
         Invoke("FinishDie", .55f);
+        
+        
     }
     void FinishDie()
     {
@@ -248,7 +273,9 @@ public class Lizard : MonoBehaviour
             isDead = false;
             moveSpeed = 3.9f;
             torchlight.intensity = 1.5f;
-            transform.position = new Vector3(checkpoint.position.x, checkpoint.position.y);
+            transform.position = new Vector3(checkX, checkY);
+            timer = _timer;
+            finalBlackSquare.SetActive(false);
         }
     }
 }

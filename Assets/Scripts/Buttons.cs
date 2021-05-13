@@ -52,11 +52,7 @@ public class Buttons : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
-    public void Pause()
-    {
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0;
-    }
+    
     public void Exit()
     {
         Time.timeScale = 1;
