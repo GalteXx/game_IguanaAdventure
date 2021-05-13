@@ -23,7 +23,7 @@ public class Buttons : MonoBehaviour
         else if (!FindObjectOfType<MenuIguana>().menuWalk)
         {
             // loading another scene
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
     // some funcs to see player's profile, to share the game, to like the game and look for information about the game. Until our game appears on the Steam there will be links to our team members' VK profiles
@@ -56,6 +56,6 @@ public class Buttons : MonoBehaviour
     public void Exit()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
