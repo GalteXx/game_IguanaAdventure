@@ -6,4 +6,6 @@ ___
 ___
 
 
-По всем вопросам: Корсаков Максим
+Fun fact: this project uses a maleware'ish dependency abd might actually be compromised...
+
+Please, do not download it :)
